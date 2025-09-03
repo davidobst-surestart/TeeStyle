@@ -1,0 +1,152 @@
+import { Product } from '../components/ProductCard';
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Classic Cotton Crew Neck",
+    price: 29.99,
+    originalPrice: 39.99,
+    image: "https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "unisex",
+    colors: ["#000000", "#FFFFFF", "#808080", "#000080"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    rating: 4.5,
+    isOnSale: true,
+    isNew: false
+  },
+  {
+    id: 2,
+    name: "Vintage Graphic Tee",
+    price: 34.99,
+    image: "https://images.pexels.com/photos/8532617/pexels-photo-8532617.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "men",
+    colors: ["#000000", "#8B4513", "#006400"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    rating: 4.8,
+    isOnSale: false,
+    isNew: true
+  },
+  {
+    id: 3,
+    name: "Organic Cotton V-Neck",
+    price: 32.99,
+    image: "https://images.pexels.com/photos/8532618/pexels-photo-8532618.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "women",
+    colors: ["#FFC0CB", "#E6E6FA", "#F5F5DC"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    rating: 4.3,
+    isOnSale: false,
+    isNew: true
+  },
+  {
+    id: 4,
+    name: "Striped Long Sleeve",
+    price: 39.99,
+    originalPrice: 49.99,
+    image: "https://images.pexels.com/photos/8532619/pexels-photo-8532619.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "women",
+    colors: ["#000000", "#FFFFFF", "#000080"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    rating: 4.6,
+    isOnSale: true,
+    isNew: false
+  },
+  {
+    id: 5,
+    name: "Premium Polo Shirt",
+    price: 49.99,
+    image: "https://images.pexels.com/photos/8532620/pexels-photo-8532620.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "men",
+    colors: ["#000080", "#FFFFFF", "#808080"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    rating: 4.7,
+    isOnSale: false,
+    isNew: false
+  },
+  {
+    id: 6,
+    name: "Oversized Comfort Tee",
+    price: 27.99,
+    image: "https://images.pexels.com/photos/8532621/pexels-photo-8532621.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "unisex",
+    colors: ["#000000", "#FFFFFF", "#808080", "#654321"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    rating: 4.4,
+    isOnSale: false,
+    isNew: true
+  },
+  {
+    id: 7,
+    name: "Athletic Performance Tee",
+    price: 42.99,
+    image: "https://images.pexels.com/photos/8532622/pexels-photo-8532622.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "men",
+    colors: ["#000000", "#000080", "#8B0000"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    rating: 4.9,
+    isOnSale: false,
+    isNew: true
+  },
+  {
+    id: 8,
+    name: "Floral Print Fitted Tee",
+    price: 36.99,
+    originalPrice: 44.99,
+    image: "https://images.pexels.com/photos/8532623/pexels-photo-8532623.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "women",
+    colors: ["#FFC0CB", "#E6E6FA", "#98FB98"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    rating: 4.2,
+    isOnSale: true,
+    isNew: false
+  },
+  {
+    id: 9,
+    name: "Minimalist Logo Tee",
+    price: 31.99,
+    image: "https://images.pexels.com/photos/8532624/pexels-photo-8532624.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "unisex",
+    colors: ["#000000", "#FFFFFF", "#808080"],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    rating: 4.5,
+    isOnSale: false,
+    isNew: false
+  },
+  {
+    id: 10,
+    name: "Kids Rainbow Tee",
+    price: 19.99,
+    image: "https://images.pexels.com/photos/8532625/pexels-photo-8532625.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "kids",
+    colors: ["#FF69B4", "#00CED1", "#FFD700"],
+    sizes: ["4T", "5T", "6T", "7T", "8T"],
+    rating: 4.8,
+    isOnSale: false,
+    isNew: true
+  },
+  {
+    id: 11,
+    name: "Henley Button Shirt",
+    price: 44.99,
+    originalPrice: 54.99,
+    image: "https://images.pexels.com/photos/8532626/pexels-photo-8532626.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "men",
+    colors: ["#000000", "#FFFFFF", "#8B4513"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    rating: 4.6,
+    isOnSale: true,
+    isNew: false
+  },
+  {
+    id: 12,
+    name: "Crop Top Basic",
+    price: 24.99,
+    image: "https://images.pexels.com/photos/8532627/pexels-photo-8532627.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "women",
+    colors: ["#000000", "#FFFFFF", "#FFC0CB"],
+    sizes: ["XS", "S", "M", "L"],
+    rating: 4.3,
+    isOnSale: false,
+    isNew: true
+  }
+];
