@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Premium T-Shirts for
+              Cheap T-Shirts for
               <span className="block text-orange-400">Every Style</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
