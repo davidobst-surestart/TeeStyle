@@ -60,7 +60,7 @@ function App() {
   const cartItemsCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gray-50">
       <Header 
         cartItemsCount={cartItemsCount}
         onCartClick={() => setIsCartOpen(true)}

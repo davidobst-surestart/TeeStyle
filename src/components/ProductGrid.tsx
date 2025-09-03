@@ -38,8 +38,8 @@ export default function ProductGrid({ products, onAddToCart }: ProductGridProps)
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">Our Collection</h2>
-          <p className="text-slate-600">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Collection</h2>
+          <p className="text-gray-600">
             Showing {sortedProducts.length} products
           </p>
         </div>
@@ -48,11 +48,11 @@ export default function ProductGrid({ products, onAddToCart }: ProductGridProps)
         <div className="flex flex-col sm:flex-row gap-4 mt-4 lg:mt-0">
           {/* Category Filter */}
           <div className="flex items-center gap-2">
-            <Filter size={16} className="text-slate-500" />
+            <Filter size={16} className="text-gray-500" />
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             >
               {categories.map(category => (
                 <option key={category} value={category}>
@@ -66,7 +66,7 @@ export default function ProductGrid({ products, onAddToCart }: ProductGridProps)
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           >
             <option value="featured">Featured</option>
             <option value="price-low">Price: Low to High</option>
@@ -76,16 +76,16 @@ export default function ProductGrid({ products, onAddToCart }: ProductGridProps)
           </select>
 
           {/* View Mode */}
-          <div className="flex border border-slate-300 rounded-lg overflow-hidden">
+          <div className="flex border border-gray-300 rounded-lg overflow-hidden">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-2 ${viewMode === 'grid' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+              className={`p-2 ${viewMode === 'grid' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:bg-gray-50'}`}
             >
               <Grid size={16} />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-2 ${viewMode === 'list' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}
+              className={`p-2 ${viewMode === 'list' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:bg-gray-50'}`}
             >
               <List size={16} />
             </button>
@@ -110,7 +110,7 @@ export default function ProductGrid({ products, onAddToCart }: ProductGridProps)
 
       {sortedProducts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-slate-500 text-lg">No products found in this category.</p>
+          <p className="text-gray-500 text-lg">No products found in this category.</p>
         </div>
       )}
     </section>

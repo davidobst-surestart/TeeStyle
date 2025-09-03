@@ -39,12 +39,12 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {product.isNew && (
-            <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+            <span className="bg-emerald-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
               New
             </span>
           )}
           {product.isOnSale && (
-            <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+            <span className="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
               -{discountPercentage}%
             </span>
           )}
@@ -52,8 +52,8 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
 
         {/* Quick Actions */}
         <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md hover:bg-white transition-colors duration-200">
-            <Heart size={16} className="text-slate-600 hover:text-rose-500" />
+          <button className="p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors duration-200">
+            <Heart size={16} className="text-gray-600" />
           </button>
         </div>
 
@@ -61,7 +61,7 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
         <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           <button
             onClick={() => onAddToCart(product)}
-            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
+            className="w-full bg-slate-900 hover:bg-orange-500 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors duration-200"
           >
             <Plus size={16} />
             Add to Cart
@@ -72,35 +72,35 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
       {/* Product Info */}
       <div className="p-5">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="font-semibold text-slate-900 text-lg leading-tight line-clamp-2">
+          <h3 className="font-semibold text-gray-900 text-lg leading-tight line-clamp-2">
             {product.name}
           </h3>
         </div>
         
-        <p className="text-sm text-slate-500 mb-3 capitalize">{product.category}</p>
+        <p className="text-sm text-gray-500 mb-3 capitalize">{product.category}</p>
         
         {/* Colors */}
         <div className="flex items-center gap-2 mb-3">
           {product.colors.slice(0, 4).map((color, index) => (
             <div
               key={index}
-              className="w-4 h-4 rounded-full border-2 border-slate-200 shadow-sm"
+              className="w-4 h-4 rounded-full border-2 border-gray-200"
               style={{ backgroundColor: color }}
             />
           ))}
           {product.colors.length > 4 && (
-            <span className="text-xs text-slate-500">+{product.colors.length - 4}</span>
+            <span className="text-xs text-gray-500">+{product.colors.length - 4}</span>
           )}
         </div>
 
         {/* Price */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-slate-900">
+            <span className="text-xl font-bold text-gray-900">
               ${product.price}
             </span>
             {product.originalPrice && (
-              <span className="text-sm text-slate-500 line-through">
+              <span className="text-sm text-gray-500 line-through">
                 ${product.originalPrice}
               </span>
             )}
@@ -113,7 +113,7 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
                 <svg
                   key={i}
                   className={`w-3 h-3 ${
-                    i < Math.floor(product.rating) ? 'text-amber-400' : 'text-slate-300'
+                    i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'
                   }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -122,7 +122,7 @@ export default function ProductCard({ product, onAddToCart, onQuickView }: Produ
                 </svg>
               ))}
             </div>
-            <span className="ml-1 text-xs text-slate-500">({product.rating})</span>
+            <span className="ml-1 text-xs text-gray-500">({product.rating})</span>
           </div>
         </div>
       </div>

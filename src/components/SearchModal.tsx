@@ -35,18 +35,18 @@ export default function SearchModal({ isOpen, onClose, products, onSelectProduct
         <div className="p-6">
           {/* Search Input */}
           <div className="relative mb-6">
-            <Search size={20} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" />
+            <Search size={20} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
             <input
               type="text"
               placeholder="Search for t-shirts..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-12 py-4 border border-slate-200 rounded-xl text-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full pl-12 pr-12 py-4 border border-gray-200 rounded-xl text-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               autoFocus
             />
             <button
               onClick={onClose}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600"
             >
               <X size={20} />
             </button>
@@ -65,23 +65,23 @@ export default function SearchModal({ isOpen, onClose, products, onSelectProduct
                         onClose();
                         setSearchTerm('');
                       }}
-                     className="w-full flex items-center gap-4 p-3 rounded-lg hover:bg-slate-50 text-left transition-colors duration-200"
+                      className="w-full flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 text-left transition-colors duration-200"
                     >
                       <img
                         src={product.image}
                         alt={product.name}
-                       className="w-12 h-12 object-cover rounded-lg bg-slate-100"
+                        className="w-12 h-12 object-cover rounded-lg bg-gray-100"
                       />
                       <div className="flex-1">
-                       <h3 className="font-medium text-slate-900">{product.name}</h3>
-                       <p className="text-sm text-slate-500 capitalize">{product.category} • ${product.price}</p>
+                        <h3 className="font-medium text-gray-900">{product.name}</h3>
+                        <p className="text-sm text-gray-500 capitalize">{product.category} • ${product.price}</p>
                       </div>
                     </button>
                   ))}
                 </div>
               ) : (
                 <div className="text-center py-8">
-                  <p className="text-slate-500">No products found for "{searchTerm}"</p>
+                  <p className="text-gray-500">No products found for "{searchTerm}"</p>
                 </div>
               )}
             </div>
