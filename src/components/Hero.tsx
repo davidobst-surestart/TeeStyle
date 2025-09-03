@@ -13,7 +13,8 @@ export default function Hero() {
               <span className="block text-orange-400">Every Style</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Premium t-shirts that blend comfort, style, and quality for every occasion.
+              Discover our curated collection of high-quality, comfortable t-shirts 
+              designed for the modern lifestyle. From classic fits to trending designs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-200 transform hover:scale-105">
