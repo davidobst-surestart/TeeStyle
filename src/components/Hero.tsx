@@ -27,8 +27,14 @@ export default function Hero() {
           </div>
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl transform rotate-3 opacity-80"></div>
-            <div className="absolute inset-4 bg-white rounded-2xl shadow-2xl flex items-center justify-center">
-              <div className="text-center">
+            <div className="absolute inset-4 bg-white rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-20"
+                style={{
+                  backgroundImage: 'url(https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800)'
+                }}
+              ></div>
+              <div className="text-center relative z-10">
                 <div className="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-4xl font-bold text-slate-700">T</span>
                 </div>
